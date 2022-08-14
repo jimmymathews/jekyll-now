@@ -1,0 +1,144 @@
+   
+\documentclass[10pt]{article}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[hidelinks, colorlinks=true, allcolors=blue]{hyperref}
+\setlength{\parindent}{0pt}
+
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{upquote=true, showstringspaces=false}
+\usepackage{xparse}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{black}{#1}}%
+}
+
+\lstset{language=C,keywordstyle={\bfseries \color{blue}}}
+\usepackage[T1]{fontenc}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[noframe]{showframe}
+\usepackage{framed}
+\renewenvironment{shaded}{%
+  \def\FrameCommand{\fboxsep=\FrameSep \colorbox{shadecolor}}%
+  \MakeFramed{\advance\hsize-\width \FrameRestore\FrameRestore}}%
+ {\endMakeFramed}
+\definecolor{shadecolor}{gray}{0.9}
+
+\renewcommand{\contentsname}{}
+\title{Budget projection: Scholarship Workshop 2023}
+\author{Author: Jimmy Mathews}
+\date{Drafted: \today}
+\begin{document}
+\maketitle
+
+\section*{Parameters}
+Here are a few key parameters that are used to create different scenarios for the budget projection:
+
+\renewcommand{\arraystretch}{1.8}
+\begin{center}
+\begin{tabular}{p{5.2cm}|p{8.5cm}|p{1.5cm}}
+\multicolumn{1}{c|}{Parameter} & \multicolumn{1}{|c|}{Possiblities} & \multicolumn{1}{|c}{Label}\\ \hline
+Number of participants & about 5 & 5 \\
+ & between 5 and 20 & 5-20 \\
+ & about 20 & 20 \\ \hline
+Degree of venue accomodations & tent/rustic & tent \\
+& cabins and common shower/bathrooms & cabin \\
+& full house amentities, bedrooms, kitchen, bathrooms & house \\ \hline
+Venue location class with respect to human geography & rural, $>$2 hour drive to train or air transportation hub, $>$30 minute drive to grocery supply & rural \\
+ & between rural and urban  & suburban \\
+ & urban, no car needed to obtain basic services or food, or to reach train or air transportation hub & urban \\
+\end{tabular}
+\end{center}
+\renewcommand{\arraystretch}{1.0}
+
+The duration is assumed to be 8 weeks, tentatively May 29 - July 21, 2023.
+
+\section*{Cost list}
+
+\newcounter{costexplanation}
+\newcommand{\costlabel}[1]{\refstepcounter{costexplanation}\label{#1}\textsuperscript{\thecostexplanation}}
+
+\begin{center}
+\begin{tabular}{lllrl}
+Cost category                         &                          & Specifier                 & Cost estimate (\$) & Date needed \\ \hline
+Venue                                 & \costlabel{v.5.tent}     & 5 and tent                &   1500.00          &             \\
+                                      & \costlabel{v.5.cabin}    & 5 and cabin               &   2400.00          &             \\
+                                      & \costlabel{v.5.house}    & 5 and house               &  11000.00          &             \\
+                                      & \costlabel{v.5-20.tent}  & 5-20 and tent             &   3000.00          &             \\
+                                      & \costlabel{v.5-20.cabin} & 5-20 and cabin            &   6400.00          &             \\
+                                      & \costlabel{v.5-20.house} & 5-20 and house            &  18000.00          &             \\
+                                      & \costlabel{v.20.tent}    & 20 and tent               &   3000.00          &             \\
+                                      & \costlabel{v.20.cabin}   & 20 and cabin              &  12800.00          &             \\
+                                      & \costlabel{v.20.house}   & 20 and house              &  20000.00          &             \\
+$\quad$ renters' insurance            & \costlabel{v.house}      & house                     &    200.00          &             \\ \hline
+Food                                  & \costlabel{f.5}          & 5                         &   3000.00          &             \\
+                                      & \costlabel{f.5-20}       & 5-20                      &   9000.00          &             \\
+                                      & \costlabel{f.20}         & 20                        &  12000.00          &             \\
+$\quad$ prep materials, appliances... & \costlabel{f.tent}       & tent                      &   3450.00          &             \\ \hline
+Internet                              & \costlabel{inte}         &                           &    240.00          &             \\
+$\quad$ inaccessibility markup        & \costlabel{inte.rural}   & rural                     &    240.00          &             \\
+$\quad$ inaccessibility markup        & \costlabel{inte.tent}    & tent                      &    160.00          &             \\ \hline
+Electricity                           & \costlabel{elec.house}   & house                     &    500.00          &             \\ \hline
+Books/articles                        & \costlabel{book}         &                           &   1500.00          &             \\ \hline
+Transportation                        & \costlabel{trans.5}      & 5                         &   1500.00          &             \\
+                                      & \costlabel{trans.5-20}   & 5-20                      &   4500.00          &             \\
+                                      & \costlabel{trans.20}     & 20                        &   6000.00          &             \\
+$\quad$ car/gas usage                 & \costlabel{trans.r.s}    & rural or suburban         &    710.00          &             \\ \hline
+Stipend                               & \costlabel{st.5}         & 5                         &   2500.00          &             \\
+                                      & \costlabel{st.5-20}      & 5-20                      &   7500.00          &             \\
+                                      & \costlabel{st.20}        & 20                        &  10000.00          &             \\ \hline
+Visitors / guest speakers             & \costlabel{vis}          &                           &   3000.00          &             \\ \hline
+Emergency contingency                 & \costlabel{ec}           &                           &   1000.00          &             \\ \hline
+Start-up fund                         & \costlabel{startup}      &                           &  10000.00          &             \\
+\end{tabular}
+\end{center}
+
+\section*{Cost estimate explanations/assumptions}
+\begin{itemize}[leftmargin=*]
+\itemsep0em
+  \item[]{\ref{v.5.tent}. We can use my lot and tiny cabin in Otisville NY for free. Alternatively, we may find a willing landowner of a more advantageous site for about \$250/month, and perhaps even move my cabin to the site for something like \$500 and a weekend's labor. There will also be some costs for the tent or tents themselves and camping gear, perhaps \$500.}
+  \item[]{\ref{v.5.cabin}. 1 cabin in a state park would do. There are hundreds of cabins in New York state parks, typically with capacity for 4-6 people per cabin, ranging from about \$250 to \$600 per week. See \href{https://newyorkstateparks.reserveamerica.com/}{here}. I used 1 $\times$ \$300 $\times$ 8 weeks.}
+  \item[]{\ref{v.5.house}. A furnished whole-house rental for 5 bedrooms and 3 or more bathrooms tends to be around \$4000 - \$6000 per month, according to a few Zillow searches, although these are admittedly usually only available in more rural/suburban areas. For example \href{https://www.zillow.com/homedetails/57-Snow-Hill-Rd-Parksville-NY-12768/32773677_zpid/}{\$4100/mo in Parksville NY} or \href{https://www.zillow.com/homedetails/284-Taft-Ct-Paramus-NJ-07652/37992854_zpid/}{\$6300/mo in Paramus NJ}. This can also be much more for short terms.}
+  \item[]{\ref{v.5-20.tent}. This scenario will likely require a high-quality, accessible site in a farmer's field or something. We could expect to be charged perhaps \$1000 per month by the site owner, who may offer a few amenities in return like camp showers/bathrooms or the use of some common areas. Some literal campgrounds may be appropriate, for about this same cost. Still, like in the 5-person tent scenario, there will also be some costs for the tent or tents themselves and camping gear, perhaps \$1000.}
+  \item[]{\ref{v.5-20.cabin}. Assuming 2 cabins at \$400 per week.}
+  \item[]{\ref{v.5-20.house}. A furnished whole-house rental for 6 bedrooms and 4 or more bathrooms, with large square-feet indicating ample re-purposeable space to accomodate more people then the bedroom count would suggest, tends to rent for around \$9000 / month. See \href{https://www.zillow.com/homedetails/3-Forest-Ln-Scarsdale-NY-10583/33095321_zpid/}{\$9000/mo in Scarsdale NY} or \href{https://www.zillow.com/homedetails/75-Meadow-Woods-Rd-Great-Neck-NY-11020/31069513_zpid/}{\$9800/mo in Great Neck NY}, or \href{https://www.zillow.com/homedetails/14-Toledo-Dr-Brick-NJ-08723/39546690_zpid/}{\$7000/mo in Brick NJ}.}
+  \item[]{\ref{v.20.tent}. This scenario is not much different from the 5-20 person tent scenario.}
+  \item[]{\ref{v.20.cabin}. Assuming 4 cabins at \$400 per week.}
+  \item[]{\ref{v.20.house}. This scenario is surprisingly not that difficut from the 5-20 scenario, due to patterns of residential architecture. Marginally more space at a certain point is not much more expensive; when there are higher costs they seem to come instead from special amenities (beachside, pool, fancy neighborhood, etc.).}
+  \item[]{\ref{v.house}. Most house rentals will require renter's insurance. This is usually low, say \$10 per month for a household, but we might get appraised at a higher cost due to our non-standard meeting structure (e.g. large number of people).}
+  \item[]{\ref{f.5}. I assume that the participants will delegate food preparation duties amongst themselves, so the costs here are mainly ingredients and possibly delivery. According to the USDA, in \href{https://fns-prod.azureedge.us/sites/default/files/media/file/CostofFoodMay2022LowModLib.pdf}{May 2022} typical adults can eat nutritiously by spending about \$300 per month on food. I suspect this is much higher in the northeast corridor. However, this effect is perhaps balanced by thriftiness in meal preparation for the group. So, sticking with the \$300 per month per person figure, we get 5 $\times$ \$300 $\times$ 2 months.}
+  \item[]{\ref{f.5-20}. For conservatism, using 15 people as the reference, the food costs should approximately triple compared with the 5-person case.}
+  \item[]{\ref{f.20}. 4 times the 5-person case.}
+  \item[]{\ref{f.tent}. In minimalist/rustic conditions, food preparation is more costly due to lack of a kitchen. Moreover these conditions incentivize much more frequent purchase of prepared food, possibly delivered as well. To roughly account for this, assume 2 times per week an extra cost of \$200 for a large meal for 5 to 10 people. So 2 $\times$ 8 weeks $\times$ \$200, plus \$250 in preparation materials and supplies.}
+  \item[]{\ref{inte}. In the US the base cost of internet access is around \$60 per month. For the higher bandwidth of many users, we should perhaps double this to \$120 per month.}
+  \item[]{\ref{inte.rural}. In rural areas internet access is often supplied by local companies via satellite infrastructure. Being local is associated with a higher per-customer charge, and so it satellite internet. This could perhaps double the base cost, so in the case of rural we can expect an extra charge of \$120 per month.}
+  \item[]{\ref{inte.tent}. Under the tent scenario, internet access will likely come from some combination of individual data plans and ordinary internet access in common areas somewhat off-site. Since this would however replace the base cost, the additional charge here is probably not too much, perhaps \$80 per month.}
+  \item[]{\ref{elec.house}. According to the \href{https://www.eia.gov/todayinenergy/detail.php?id=46276#:~:text=In%202019%2C%20the%20average%20monthly,%24118%20to%20%24115%20per%20month.}{US Energy Information Administration}, in 2019 residential electricity usage was about \$115 per month per household. The typical household is about 3 people. Many electrical costs do not scale up with number of people, but rather with household volume (e.g. cooling). So \$300 per month could be reasonable in any house scenario. Note that in the tent or cabin scenarios, electricity costs could be mostly built in to venue rental costs, although admittedly in these scenarios (especially tent) electricity might just be generally less available in the first place.}
+  \item[]{\ref{book}. We will be doing scholarship, which will probably require purchasing online access to publications or buying physical books for delivery. A typical paywalled article I've encountered seems to be around \$30. Let's say 10 of these. A typical book we might purchase is perhaps \$80, and in some cases the purpose might be to have multiple physical copies, so let's estimate 15 book purchases. This is 10 $\times$ \$30 + 15 $\times$ \$80.}
+  \item[]{\ref{trans.5}. The main transportation costs will be getting the participants to the site initially and back home afterwards. Some participants may be able and willing to cover some or all of this cost themselves, so this portion of the costs can be regarded as a fund to be disbursed on a case-by-case need basis. We could expect about half of the participants to be fully reimbursed for travel (or all to be half-reimbursed). Air travel and/or train from random places in the US to a specific metro area with transportation hub is perhaps \$300 per person per trip on average. So 5 people $\times$ \$300 $\times$ 2 trips = \$3000. Halving this is \$1500. This could be reduced somewhat with carpooling.}
+  \item[]{\ref{trans.5-20}. For this, the 5-person figure is tripled.}
+  \item[]{\ref{trans.20}. For this, the 5-person figure is quadrupled.}
+  \item[]{\ref{trans.r.s}. In rural and suburban sites, often car travel for errands and groceries will be needed. Procuring the use of a car would be expensive. Although participants may offer (or even insist on) the use of their own cars, if so they should be at least somewhat compensated for the wear-and-tear and of course for gas. Assuming 30 miles per day of driving, 1.5 gallon of gas $\times$ 28 days $\times$ \$5 per gallon = \$140. Compensation to 1 car owner for 2 months of use should perhaps be around \$500. This is far below market rate, rental would be significantly higher, so we assume we don't do real rental.}
+  \item[]{\ref{st.5}. A stipend of \$500 per person would provide additional capacity for each participant to meet their own daily quotas for personal comfort, as well as confer some legitimacy/clout to the whole endeavor which participants may benefit from. The offer of such a stipend also increases our pool of possible participants, probably to include many well-qualified people that would not otherwise be available. 5 $\times$ \$500 $\times$ = \$2500.}
+  \item[]{\ref{st.5-20}. Triple the 5-person figure.}
+  \item[]{\ref{st.20}. 4 times the 5-person figure.}
+  \item[]{\ref{vis}. As in academic conferences, it can be helpful to get knowledgeable people to come and work with us, deliver a lecture, etc. When they are also well-known in a field we care about, advertising the commitment of such guests can increase the chances of funding, good applicants, or other forms of support. Depending on their availability, this would typically require reimbursement of travel cost, additional separate lodging (if requested), and meals. We should probably consider offering to pay speaking fees as well, although it would necessarily be modest compared with a truly sponsored event. Let's say for a 2-day trip for one guest this adds to \$1500. Assume 2 such guests.}
+  \item[]{\ref{ec}. With so many people, and potentially unfamiliar venue and locale, there is a non-trivial risk of surprise costs due to accidents or weather events. Instead of ruining the whole event, such costs may be partly covered by this emergency contingency fund. Part of this fund could perhaps be spent on actual accident insurance for the event. Some such insurance will likely be needed for legal reasons at some point anyway. This is very difficult to quantify due to the inherent uncertainty, but as a baseline: accident insurance runs about \$20 per person per month. So let's say 20 people max $\times$ \$20 $\times$ 2 months = \$800, plus \$200 for a non-accident category of such costs.}
+  \item[]{\ref{startup}. This is the fund delegated to the participants during the final phase of the workshop to be used in entrepreneurship activities of their choice. This is a flexible cost item, but a minimum of about \$10000 is probably needed to get even close to providing the participants with the sense that they can start an activity with a significant impact. In future budget projections this could perhaps be increased radically depending on availability of funds. For the current purpose of \emph{initial} budget projection, however, it is necessary to err on the side of lower costs in order to achieve feasibility.}
+\end{itemize}
+
+\section*{Totals by scenario}
+
+\input{totals_by_scenario.tex}
+
+\section*{Totals by scenario (sorted)}
+
+\input{totals_by_scenario_sorted.tex}
+
+\end{document}
