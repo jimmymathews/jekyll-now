@@ -1,0 +1,114 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1.0in, tmargin=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[hidelinks, colorlinks=true, allcolors=blue]{hyperref}
+\setlength{\parindent}{0pt}
+
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{upquote=true, showstringspaces=false}
+\usepackage{xparse}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{black}{#1}}%
+}
+
+\lstset{language=C,keywordstyle={\bfseries \color{blue}}}
+\usepackage[T1]{fontenc}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[noframe]{showframe}
+\usepackage{framed}
+\renewenvironment{shaded}{%
+  \def\FrameCommand{\fboxsep=\FrameSep \colorbox{shadecolor}}%
+  \MakeFramed{\advance\hsize-\width \FrameRestore\FrameRestore}}%
+ {\endMakeFramed}
+\definecolor{shadecolor}{gray}{0.9}
+
+\renewcommand{\contentsname}{}
+\title{Base budget projection: Scholarship Workshop 2023}
+\date{}
+\begin{document}
+\maketitle
+
+\vspace{-1pc}
+
+
+The stable budget scenario involves 20 workshop participants, in a semi-rural or suburban setting at a campground, park, or hostel, well-equipped with amenities and cabins or similar accomodations.
+
+We have graded the priority of each expense 1, 2, 3, or 4. The base budget includes all items of levels 1, 2, 3.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{llr}
+Item & & Cost (USD) \\ \hline
+Venue &  & 12800 \\
+Food &  & 12000 \\
+Internet &  & 240 \\
+Internet ( inaccessibility markup) &  & 240 \\
+Books/articles &  & 1500 \\
+Transportation &  & 8000 \\
+Transportation ( full coverage) &  & 8000 \\
+Transportation ( car/gas usage) &  & 710 \\
+Stipend &  & 10000 \\
+Visitors / guest speakers &  & 3000 \\
+Emergency contingency &  & 1000 \\
+Start-up fund &  & 10000 \\
+Labor ( community-building events) &  & 4224 \\
+Labor ( workshop schedule/design) &  & 2112 \\
+Labor ( administration) &  & 2112 \\
+Labor ( community-building events, adjustment) &  & 3776 \\
+Labor ( workshop schedule/design, adjustment) &  & 3488 \\
+Labor ( administration, adjustment) &  & 2688 \\
+Fiscal sponsor fees (PPF) &  & 5482 \\ \hline
+total &  & 91372
+\end{tabular}
+\end{center}
+\caption{Includes items of priority rank $\leq$ 3.}\label{main}
+\end{table}
+
+Under budgetary constraints we may implement the following fallback scenarios:
+
+\begin{table}[h]
+\begin{tabular}{llr}
+Item &  & Cost (USD) \\ \hline
+Venue &  & 12800 \\
+Food &  & 12000 \\
+Internet &  & 240 \\
+Internet ( inaccessibility markup) &  & 240 \\
+Books/articles &  & 1500 \\
+Transportation &  & 8000 \\
+Transportation ( car/gas usage) &  & 710 \\
+Emergency contingency &  & 1000 \\
+Labor ( community-building events) &  & 4224 \\
+Labor ( workshop schedule/design) &  & 2112 \\
+Labor ( administration) &  & 2112 \\
+Fiscal sponsor fees (PPF) &  & 2868 \\ \hline
+total &  & 47806
+\end{tabular}
+\begin{tabular}{llr}
+ &  & \\
+ &  & \\
+ &  & \\
+ &  & \\
+ &  & \\
+Item & & Cost (USD) \\ \hline
+Venue &  & 12800 \\
+Food &  & 12000 \\
+Emergency contingency &  & 1000 \\
+Labor ( community-building events) &  & 4224 \\
+Labor ( workshop schedule/design) &  & 2112 \\
+Labor ( administration) &  & 2112 \\
+Fiscal sponsor fees (PPF) &  & 2186 \\ \hline
+total &  & 36434
+\end{tabular}
+\caption{Includes items of priority rank $\leq$ 2 (left) and $\leq$ 1 (right).}\label{caplab}
+\end{table}
+
+The full list of scenarios can be found \href{https://raw.githubusercontent.com/let-me-think/let-me-think.github.io/master/budget_2023/budget_projection.pdf}{here}.
+
+\end{document}

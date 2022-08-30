@@ -1,0 +1,70 @@
+\documentclass[10pt]{article}
+\usepackage[margin=1.0in, tmargin=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[hidelinks, colorlinks=true, allcolors=blue]{hyperref}
+\setlength{\parindent}{0pt}
+
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{upquote=true, showstringspaces=false}
+\usepackage{xparse}
+
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{black}{#1}}%
+}
+
+\lstset{language=C,keywordstyle={\bfseries \color{blue}}}
+\usepackage[T1]{fontenc}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[noframe]{showframe}
+\usepackage{framed}
+\renewenvironment{shaded}{%
+  \def\FrameCommand{\fboxsep=\FrameSep \colorbox{shadecolor}}%
+  \MakeFramed{\advance\hsize-\width \FrameRestore\FrameRestore}}%
+ {\endMakeFramed}
+\definecolor{shadecolor}{gray}{0.9}
+
+\renewcommand{\contentsname}{}
+\title{Ambitious budget projection: Scholarship Workshop 2023}
+\date{}
+\begin{document}
+\maketitle
+
+\vspace{-1pc}
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{llr}
+Item & & Cost (USD) \\ \hline
+Venue &  & 12800 \\
+Food &  & 12000 \\
+Internet &  & 240 \\
+Internet ( inaccessibility markup) &  & 240 \\
+Books/articles &  & 1500 \\
+Transportation &  & 8000 \\
+Transportation ( full coverage) &  & 8000 \\
+Transportation ( car/gas usage) &  & 710 \\
+Stipend &  & 10000 \\
+Stipend &  & 130000 \\
+Visitors / guest speakers &  & 3000 \\
+Emergency contingency &  & 1000 \\
+Start-up fund &  & 10000 \\
+Labor ( community-building events) &  & 4224 \\
+Labor ( workshop schedule/design) &  & 2112 \\
+Labor ( administration) &  & 2112 \\
+Labor ( community-building events, adjustment) &  & 3776 \\
+Labor ( workshop schedule/design, adjustment) &  & 3488 \\
+Labor ( administration, adjustment) &  & 2688 \\
+Fiscal sponsor fees (PPF) &  & 13780 \\ \hline
+total &  & 229670
+\end{tabular}
+\end{center}
+\caption{Including items of priority rank $\leq$ 4.}\label{capcap}
+\end{table}
+
+\end{document}
