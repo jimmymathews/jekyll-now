@@ -1,8 +1,8 @@
 # People
 
-* Bethelihem Gebresilasie – Community Organizing
-* James Mathews – Logistics
-* Joshua Meyers – Strategy and Fundraising
+* Joshua Meyers – Director
+* Bethelihem Gebresilasie – Project Manager
+* James Mathews – Treasurer
 
 (roles are partially shared and may change over time)
 
